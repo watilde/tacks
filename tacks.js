@@ -9,7 +9,7 @@ Tacks.Symlink = require('./symlink.js')
 
 function Tacks (fixture) {
   this.fixture = fixture
-  fixture.computePath('/')
+  fixture.computePath(path.sep)
 }
 Tacks.prototype = {}
 

@@ -15,7 +15,7 @@ Entry.prototype.forContents = function (cb) {
 }
 
 Entry.prototype.computePath = function (entitypath) {
-  this.path = path.relative('/', entitypath)
+  this.path = path.relative(path.sep, entitypath)
 }
 
 Entry.prototype.create = function (where) {

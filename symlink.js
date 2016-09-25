@@ -10,7 +10,7 @@ module.exports = Symlink
 function Symlink (dest) {
   if (this == null) return new Symlink(dest)
   if (dest == null || dest === '') throw new Error('Symlinks must have a destination')
-  if (typeof dest === 'string') dest = path.relative(dest)
+  dest = path.relative(path.sep, dest)
   Entry.call(this, 'symlink', dest)
 }
 inherits(Symlink, Entry)
