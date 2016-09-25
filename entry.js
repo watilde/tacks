@@ -5,7 +5,7 @@ module.exports = Entry
 
 function Entry (type, contents) {
   this.type = type
-  this.contents = path.resolve(contents)
+  this.contents = contents
   this.path = null
 }
 Entry.prototype = {}
