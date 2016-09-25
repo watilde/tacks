@@ -8,6 +8,7 @@ var asLiteral = require('./as-literal.js')
 module.exports = Symlink
 
 function Symlink (dest) {
+  dest = path.resolve(dest)
   if (this == null) return new Symlink(dest)
   if (dest == null || dest === '') throw new Error('Symlinks must have a destination')
   Entry.call(this, 'symlink', dest)
