@@ -79,7 +79,7 @@ test('loadFromDir', function (t) {
 
 test('generateFromDir', function (t) {
   var js = generateFromDir(testdir)
-  fs.writeFileSync(testmodule, js.replace(/'tacks'/g, "'../../index.js'"))
+  fs.writeFileSync(testmodule, js.replace(/'tacks'/g, "'.." + path.sep + ".." + path.sep + "index.js'"))
   var modelFromModule = require(testmodule)
   return tacksAreTheSame(t, modelFromModule, fixture, 'generateFromDir')
 }).catch(test.throws)
